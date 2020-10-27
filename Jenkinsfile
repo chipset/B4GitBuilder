@@ -19,8 +19,8 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'sr01', usernameVariable: 'ZOWE_OPT_USER', passwordVariable: 'ZOWE_OPT_PASSWORD')]) {
                     // Jenkins runs as a different user.  Uncomment lines below to install plugin. Other plugins could be added here.
-                    bat "npm config set @brightside:registry https://api.bintray.com/npm/ca/brightside"
-                    bat "C:/Users/Administrator/AppData/Roaming/npm/zowe.cmd plugins install @brightside/endevor@lts-incremental"
+                    //bat "npm config set @brightside:registry https://api.bintray.com/npm/ca/brightside"
+                    //bat "C:/Users/Administrator/AppData/Roaming/npm/zowe.cmd plugins install @brightside/endevor@lts-incremental"
                     bat "C:/Users/Administrator/AppData/Roaming/npm/zowe.cmd endevor generate element $elementname --env $toenvironment --sn $tostageid --sys $tosystem --sub $tosubsystem --typ $totype $ENDEVOR"
                 }
             }
