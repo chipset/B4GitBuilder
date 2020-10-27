@@ -4,7 +4,7 @@ pipeline {
         // Set up Environment Variables
         //CHANGE THIS SECTION FOR EACH SYSTEM 
         // OR set up a secret text credential for each of the variables.
-        ENDEVOR=" --port 6002 --protocol http --reject-unauthorized false -i ENDEVOR --comment SQScan --ccid SQSCAN"
+        ENDEVOR=" --port 6002 --protocol http --reject-unauthorized false -i ENDEVOR --comment $actioncomment --ccid $actionccid"
 
         ZOWE_OPT_HOSTNAME="10.175.80.65"
         ZOWE_OPT_HOST="$ZOWE_OPT_HOSTNAME"
